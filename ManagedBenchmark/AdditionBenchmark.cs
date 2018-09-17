@@ -42,16 +42,16 @@ namespace ManagedBenchmark
                 for (var i = range.Item1; i < range.Item2; i++)
                 {
                     var value = argument1[i] + argument2[i];
-                    result[i] = value <= byte.MaxValue ? (byte) value : byte.MaxValue;
+                    result[i] = value <= byte.MaxValue ? (byte)value : byte.MaxValue;
                 }
             });
         }
 
-[Benchmark]
-public void NativeAdd()
-{
-    NativeLib.NativeAdd(argument1, argument2, result, N);
-}
+        [Benchmark]
+        public void NativeAdd()
+        {
+            NativeLib.NativeAdd(argument1, argument2, result, N);
+        }
 
         [Benchmark]
         public void NativeParallelAdd()

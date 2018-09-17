@@ -28,3 +28,4 @@ void NativeCalculator::Sum(const std::vector<unsigned char*>& arguments, unsigne
 		}
 	}
 }
+
